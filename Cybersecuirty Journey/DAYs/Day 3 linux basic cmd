@@ -1,0 +1,78 @@
+File Processing
+* pwd: Print directory
+* ls: List files
+* cd: Change directory
+* mkdir: Create folder
+* rmdir: Remove folder
+* touch: Create file
+* cp: Copy files
+* mv: Move files
+* rm: Delete files
+* find: Search files
+* ln: Create shortcut
+* tar: Compress files
+
+ Text Processing
+
+* cat: View file
+* head: View beginning
+* tail: View end
+* grep: Find text
+* nano: Text editor
+* vim: Text editor
+* awk: Process columns
+* sed: Replace text
+* wc: Count words
+* diff: Compare file
+ System Info
+
+* uname: Kernel info
+* uptime: System uptime
+* free: Check RAM
+* df: Disk space
+* du: Folder size
+* top: Monitor system
+* htop: Monitor system
+* dmesg: Kernel logs
+* hostname: System name 
+ Process Control
+
+* ps: List processes
+* kill: Stop process
+* killall: Stop program
+* bg: Background process
+* fg: Foreground process
+* jobs: List jobs
+
+ Network & Web
+
+* ping: Test network
+* ip: Network settings
+* ss: Check ports
+* curl: Download data
+* wget: Download files
+* ssh: Remote access
+* scp: Secure copy
+
+ Security & Users
+
+* sudo: Admin rights
+* chmod: Change permissions
+* chown: Change owner
+* whoami: Current user
+* useradd: Add user
+* userdel: Delete user
+* passwd: Change password
+
+ System Control
+
+* apt: Install software
+* dnf: Install software
+* pacman: Install software
+* systemctl: Manage services
+* history: Command history
+* clear: Clear screen
+* man: Command manual
+* alias: Create shortcut
+* exit: Close terminal
+* shutdown: Power off
