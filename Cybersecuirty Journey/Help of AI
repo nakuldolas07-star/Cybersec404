@@ -1,0 +1,116 @@
+
+
+**Stage 1 – Foundations**
+- Understand Cybersecurity
+- OSI Model & Networking Basics
+- TCP/IP, DNS, HTTP, HTTPS
+- Linux Basics
+- Windows Basics
+- Cybersecurity Concepts
+- Lab Setup (VirtualBox / VMware)
+
+**Stage 2 – Core Skills**
+- Networking Deep Dive
+- Security Fundamentals
+- Cryptography Basics
+- Linux Commands (Advanced)
+- Windows Internals Basics
+- Scripting Basics (Python/Bash)
+- Cybersecurity Tools Overview
+
+**Stage 3 – Security Essentials**
+- CIA Triad
+- Risk Management
+- IAM Concepts
+- Security Controls
+- Security Policies
+- Threats, Vulnerabilities, Exploits
+- Security Frameworks (NIST, ISO)
+
+**Stage 4 – Defensive Skills**
+- SIEM Basics (Splunk / Wazuh)
+- Log Analysis
+- Incident Response Basics
+- Malware Analysis Basics
+- Firewall & IDS/IPS Basics
+- Endpoint Security
+- Secure System Configuration
+
+**Stage 5 – Ethical Hacking Basics**
+- Reconnaissance
+- Scanning & Enumeration
+- Vulnerability Assessment
+- Web Application Basics (OWASP Top 10)
+- Password Attacks
+- Using Kali Linux
+- Reporting Findings
+
+**Stage 6 – Advanced Hacking**
+- Exploitation Basics
+- Privilege Escalation
+- Active Directory Basics
+- Web App Pentesting
+- Wireless Security
+- Post-Exploitation
+- Scripting for Hackers
+
+**Stage 7 – Specialized Domains**
+- Red Teaming
+- Blue Teaming
+- Threat Intelligence
+- Digital Forensics Basics
+- Cloud Security Basics
+- IoT / OT Security Basics
+- Bug Bounty Fundamentals
+
+**Stage 8 – Advanced Topics**
+
+- Advanced Exploitation
+- AD Exploitation
+- Malware Analysis (Advanced)
+- Reverse Engineering Basics
+- Threat Hunting
+- Security Automation (Python)
+- Purple Teaming
+
+**Stage 9 – Real World Experience**
+- Capture The Flag (CTF)
+- Hack The Box / TryHackMe
+- Vulnerable Labs
+- Bug Bounty Programs
+- Report Writing Practice
+- Build Your Portfolio
+- Contribute to Cybersecurity
+
+**Stage 10 – Career Preparation**
+- Resume for Cybersecurity Roles
+- LinkedIn Optimization
+- Interview Preparation
+- Technical + HR Questions
+- Build a Strong Portfolio
+- Apply & Network
+- Stay Updated & Keep Learning
+
+---
+
+## My Additions (optional extras, kept separate so the original stays untouched)
+
+**Stage 0 – Mindset & Study Setup** *(before Stage 1)*
+- Set a realistic weekly time budget (e.g. 8–10 hrs/week)
+- Pick one primary learning track (self-study vs. bootcamp vs. degree)
+- Join a community (Discord/Reddit/local meetup) for accountability
+- Keep a learning log/notebook from day one
+
+**Certifications to consider alongside stages**
+- CompTIA A+ / Network+ / Security+ → around Stage 2–3
+- eJPT or PJPT → around Stage 5
+- OSCP or CPTS → around Stage 6–7
+- GCIH, GCFA, or Security Blue Team certs → around Stage 4/7 (defensive track)
+- CISSP or CISM → later career stage, after experience
+
+**Practical add-ons**
+- Home lab documentation (write-ups of what you build/break)
+- A public GitHub with scripts, notes, or tool configs
+- Following CVE feeds / security news weekly (helps with "Stay Updated")
+- Mock interviews with peers before real interviews
+
