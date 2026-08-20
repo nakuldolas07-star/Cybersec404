@@ -1,0 +1,125 @@
+
+
+What is cyber security?
+What is the CIA triad?
+Difference between vulnerability, threat, and risk?
+What is malware? Types of malware?
+What is phishing?
+What is ransomware?
+What is social engineering?
+Difference between HTTP and HTTPS?
+What is a firewall?
+What is antivirus software?
+
+What is an IP address?
+Difference between TCP and UDP?
+What is DNS?
+What is VPN?
+What is port scanning?
+What is a proxy server?
+What are common ports (80, 443, 22, 21)?
+What is packet sniffing?
+What is NAT?
+Difference between public and private IP?
+
+What is SQL Injection?
+What is Cross-Site Scripting (XSS)?
+What is CSRF?
+What is authentication vs authorization?
+What is OWASP Top 10?
+What is session hijacking?
+What is brute force attack?
+What is directory traversal?
+What is insecure direct object reference (IDOR)?
+What is file upload vulnerability?
+
+What is Linux? Why is it used in cyber security?
+What is Kali Linux?
+Difference between chmod 777 and 755?
+What does sudo do?
+What is SSH?
+What is log monitoring?
+What is SIEM?
+What is incident response?
+What is patch management?
+What is multi-factor authentication (MFA)?
+
+---
+
+## +20 Additional Fresher Questions (mine)
+
+What is a VLAN?
+What is the difference between symmetric and asymmetric encryption?
+What is a hash function, and why is it used in security?
+What is a zero-day vulnerability?
+What is a DDoS attack?
+What is man-in-the-middle (MITM) attack?
+What is data encryption at rest vs in transit?
+What is a honeypot?
+What is the difference between IDS and IPS?
+What is a security policy?
+What is the purpose of a demilitarized zone (DMZ) in networking?
+What is a botnet?
+What is privilege escalation?
+What is the principle of least privilege?
+What is a digital certificate?
+What is two-factor authentication vs multi-factor authentication?
+What is endpoint detection and response (EDR)?
+What is a vulnerability assessment vs a penetration test?
+What is the purpose of network segmentation?
+What is GDPR, and why does it matter for security teams?
+
+---
+
+## HR Round Questions (separate, non-technical)
+
+Tell me about yourself.
+Why do you want to work in cyber security?
+Why should we hire you for this role?
+What are your strengths and weaknesses?
+Where do you see yourself in five years?
+How do you handle pressure or tight deadlines?
+Describe a time you worked in a team to solve a problem.
+Why did you choose this company?
+What motivates you to keep learning in this field?
+How do you stay updated with the latest security trends?
+Are you willing to work in rotational shifts if required?
+What are your salary expectations?
+Describe a situation where you failed and what you learned from it.
+How do you prioritize tasks when handling multiple incidents?
+What do you know about our company and its security posture?
+
+---
+
+## Tricky / Scenario-Based Questions (30, separate)
+
+If you found a critical vulnerability in production right before a client demo, what would you do?
+How would you explain a security breach to a non-technical manager?
+If a senior colleague asks you to skip a security control to save time, how do you respond?
+You suspect your own account has been compromised — what are your first three steps?
+A user reports their PC is "slow" — how do you determine if it's malware or a hardware issue?
+If two important alerts fire at the same time, how do you decide which to investigate first?
+How would you respond if your incident response plan fails mid-incident?
+You find a vulnerability but the business says fixing it will break a critical feature — what do you do?
+If you're asked to test a system without written authorization, what do you do?
+How do you differentiate a false positive from a real threat in a SIEM alert?
+An employee clicked a phishing link — walk me through your response.
+If leadership wants to downplay a breach to avoid reputational damage, what's your stance?
+How would you secure a legacy system that can't be patched?
+If you discover a coworker is misusing access privileges, what do you do?
+You're given a task with unclear requirements and a tight deadline — how do you proceed?
+How would you handle an attacker actively inside the network right now?
+If a critical patch could cause downtime during business hours, what's your recommendation?
+How do you convince management to invest in security when there's been no incident yet?
+If your monitoring tool goes down during an active attack, what's your backup plan?
+You're asked to access a system outside your usual scope for an urgent fix — how do you handle it?
+How would you explain "risk acceptance" to a stakeholder who wants everything fixed immediately?
+If forensic evidence contradicts what a user is telling you, how do you proceed?
+What would you do if you accidentally caused an outage while testing a fix?
+How do you balance usability and security when they conflict?
+If asked to bypass MFA temporarily for a VIP user, what's your response?
+How would you prioritize remediation across 100 vulnerabilities with limited resources?
+If your organization gets ransomware and backups are also affected, what's your next move?
+How do you handle a situation where the root cause of an incident is unclear even after investigation?
+If a vendor's product has a known flaw but replacing it isn't feasible right now, what do you recommend?
+How would you respond to being blamed for a breach that wasn't your fault?
