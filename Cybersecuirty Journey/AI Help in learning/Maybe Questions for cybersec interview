@@ -119,7 +119,116 @@ What would you do if you accidentally caused an outage while testing a fix?
 How do you balance usability and security when they conflict?
 If asked to bypass MFA temporarily for a VIP user, what's your response?
 How would you prioritize remediation across 100 vulnerabilities with limited resources?
-If your organization gets ransomware and backups are also affected, what's your next move?
-How do you handle a situation where the root cause of an incident is unclear even after investigation?
-If a vendor's product has a known flaw but replacing it isn't feasible right now, what do you recommend?
-How would you respond to being blamed for a breach that wasn't your fault?
+
+
+
+
+
+Here's a comprehensive list, organized by category, covering what you'll actually get asked at internship/entry-level interviews.
+
+## 1. HR / Behavioral (every interview starts here)
+- Tell me about yourself.
+- Why cybersecurity? Why this company specifically?
+- What got you interested in ethical hacking/pentesting?
+- Walk me through a project or box you're most proud of.
+- Tell me about a time you got stuck on a problem — how did you solve it?
+- How do you stay updated on new vulnerabilities/security news?
+- What are your strengths and weaknesses?
+- Where do you see yourself in 2-3 years?
+- Why should we hire you over someone with more experience?
+- Do you have any questions for us? (always have 2-3 ready)
+
+## 2. Ethics & Legal (screening question — this one matters a lot)
+- What's the difference between a white hat, black hat, and grey hat hacker?
+- What is "scope" and "rules of engagement" in a pentest? Why do they matter?
+- What would you do if you found a critical vulnerability outside the agreed scope?
+- What is the CFAA (or your local equivalent), and why should you care about it?
+- Have you ever done anything without permission that could be considered hacking? (be honest — this is a trap for the wrong answer)
+
+## 3. Networking Fundamentals
+- Explain the OSI model. What happens at each layer?
+- What's the difference between TCP and UDP? When would you use each?
+- Walk me through the TCP three-way handshake.
+- What is the difference between a hub, switch, and router?
+- What is NAT and why is it used?
+- Explain how DNS resolution works.
+- What ports do HTTP, HTTPS, SSH, FTP, DNS, SMB, RDP run on?
+- What is a subnet mask, and how do you calculate one?
+- What's the difference between a public and private IP address?
+- What is ARP, and how can it be abused (ARP spoofing)?
+
+## 4. Linux / OS Fundamentals
+- How do you check what processes are running on a Linux system?
+- Explain Linux file permissions (rwx, chmod numbers).
+- What's the difference between a symbolic link and a hard link?
+- How would you find all SUID binaries on a system?
+- What's in `/etc/passwd` vs `/etc/shadow`?
+- How do you check open ports on a machine locally?
+- What is a cron job, and how could it be a security risk?
+
+## 5. General Security Concepts
+- Explain the CIA triad.
+- What is defense in depth?
+- What's the difference between vulnerability, threat, and risk?
+- What is the Cyber Kill Chain / MITRE ATT&CK framework?
+- What's the difference between symmetric and asymmetric encryption?
+- What is a hash, and how is it different from encryption?
+- What's the difference between authentication and authorization?
+- What is a false positive vs a false negative in security scanning?
+- Explain what a CVE and a CVSS score are.
+
+## 6. Web Application Security (OWASP Top 10 — expect deep questions here)
+- Explain SQL injection. How would you test for it manually?
+- What's the difference between reflected, stored, and DOM-based XSS?
+- What is CSRF, and how is it different from XSS?
+- What is IDOR? Give an example.
+- What is SSRF, and why is it dangerous?
+- How does a directory traversal / LFI attack work?
+- What is command injection?
+- How would you identify and exploit a file upload vulnerability?
+- What's the difference between authentication bypass and privilege escalation on a web app?
+- How does Burp Suite's Repeater differ from Intruder?
+- What's the purpose of security headers like CSP, HSTS, X-Frame-Options?
+
+## 7. Network Penetration Testing / Tools
+- Walk me through your Nmap scanning methodology on a new target.
+- What's the difference between a TCP SYN scan and a full connect scan?
+- What is Metasploit, and how would you use it in an engagement?
+- What's a reverse shell vs a bind shell? Why is reverse usually preferred?
+- How would you enumerate SMB shares on a target?
+- What is Nikto used for?
+- How do you brute-force a login with Hydra, and why might that be risky/loud?
+
+## 8. Password Attacks
+- What's the difference between online and offline password attacks?
+- Why is MD5 considered weak for password hashing?
+- What is a rainbow table, and how does salting defeat it?
+- What's the difference between Hashcat and John the Ripper?
+- How would you build a targeted wordlist for a specific company?
+
+## 9. Privilege Escalation
+- Walk me through your Linux privilege escalation methodology.
+- What is GTFOBins, and how do you use it?
+- What's an unquoted service path vulnerability on Windows?
+- How would you find misconfigured sudo permissions?
+- What is a kernel exploit, and why is it usually a last resort?
+
+## 10. Active Directory (even basic knowledge stands out)
+- What is a Domain Controller?
+- Explain Kerberoasting in simple terms.
+- What is Pass-the-Hash?
+- What's the difference between NTLM and Kerberos authentication?
+- What does BloodHound do, and why is it useful?
+
+## 11. Scripting / Practical
+- Can you write a simple Python or Bash script to [scan ports / parse a log file / automate a task]?
+- Have you automated anything with a script? Walk me through it.
+- Can you read this piece of code and tell me what it does? (often a short script or snippet)
+
+## 12. Scenario-Based (very common at internship level)
+- "You've just gained a low-privilege shell on a Linux box. What are your first three commands?"
+- "You find a login form. Walk me through how you'd test it for vulnerabilities."
+- "A scan shows an open port 445 with an old SMB version. What does that suggest, and what would you try?"
+- "You find a critical vuln on a client's production system during a live engagement — what do you do right now?"
+- "How would you explain a SQL injection finding to a non-technical manager?"
+
