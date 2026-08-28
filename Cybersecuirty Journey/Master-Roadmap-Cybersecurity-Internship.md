@@ -237,16 +237,3 @@ This merges the full technical skill list with the career-side actions (portfoli
 - Waiting to feel "ready" before applying — start applying in Week 5-6, in parallel with learning, not after
 
 ---
-
-## RATING — HOW STRONG IS THIS PLAN
-
-**Technical comprehensiveness: 9.5/10**
-This now covers the full realistic curve for an entry-level offensive security role: networking, Linux, Windows/AD, recon, web app (full OWASP Top 10, not just headline items), network exploitation, password attacks, and both Linux and Windows privilege escalation. That's genuinely close to eJPT/early-OSCP-level breadth. The only things a truly exhaustive list would add — and which are optional, not core, for an *internship* — are: cloud security basics (AWS/Azure misconfig enumeration), basic malware analysis/reverse engineering awareness, and wireless attacks (WPA2 cracking). I left these out on purpose; adding them would dilute focus and you don't need them to be a strong intern candidate.
-
-**Realism for a true beginner in 8 weeks: 7/10**
-This is an aggressive, best-case pace — achievable only with genuinely daily 3-4+ hour effort and zero major life disruptions. A more typical timeline for full comfort across all of this is 4-6 months. What makes 8 weeks realistic *for the purpose of landing an internship specifically* (not full mastery) is that internships are hired on trajectory and demonstrated effort, not completeness — so "moving fast and documenting well" beats "being fully polished."
-
-**Career-strategy soundness: 9/10**
-The portfolio-first, writeup-heavy, warm-outreach approach reflects how entry-level security hiring actually works — small firms and MSSPs hire on evidence of hands-on effort far more than on credentials alone. The one risk: certification timing (Security+ especially) is tight if you're also doing the full technical curriculum; treat the cert as optional/stretch, not core-path.
-
-**Overall: 8.5/10** — as complete and correctly sequenced a self-taught roadmap as exists for this goal. Its success now depends entirely on execution consistency, not on anything missing from the plan.
