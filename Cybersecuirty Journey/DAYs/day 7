@@ -1,96 +1,139 @@
+Networking Fundamentals: Structure, Visibility, and Security
 
-# Networking Fundamentals: Structure, Visibility, and Security
+Networking is the foundation of all attacks. To understand how attackers infiltrate systems or how defenders build effective incident response, you must first understand how data moves. Network visibility and structure dictate whether an attack goes unnoticed or is immediately caught.
 
-**Networking is the foundation of all attacks.** To understand how attackers infiltrate systems or how defenders build effective incident response, you must first understand how data moves. Network visibility and structure dictate whether an attack goes unnoticed or is immediately caught.
+1. The Origins of Networking
 
-### 1. The Origins of Networking
-*   **ARPANET:** Created the first IPs and laid the groundwork for modern internet communication.
+ARPANET: Created the first IPs and laid the groundwork for modern internet communication.
 
-### 2. Types of Networks
-*   **LAN (Local Area Network):** Covers a small geographic area (e.g., a home or office).
-*   **WAN (Wide Area Network):** Covers large geographic areas (e.g., the internet).
-*   **MAN (Metropolitan Area Network):** Covers a city-sized area.
-*   **PAN (Personal Area Network):** Covers the immediate area around a single person (e.g., Bluetooth).
+2. Types of Networks
 
-### 3. Data Transfer Metrics
+LAN (Local Area Network): Covers a small geographic area (e.g., a home or office).
+
+WAN (Wide Area Network): Covers large geographic areas (e.g., the internet).
+
+MAN (Metropolitan Area Network): Covers a city-sized area.
+
+PAN (Personal Area Network): Covers the immediate area around a single person (e.g., Bluetooth).
+
+3. Data Transfer Metrics
+
 Understanding these is key for network visibility and diagnosing issues during incident response:
-*   **Latency:** The time taken for data to travel from source to destination.
-*   **Bandwidth:** The maximum amount of data that can travel in one second.
-*   **Throughput:** The *actual* speed of data transfer achieved over the network.
-*   **Jitter:** The "mood swings" of the network—fluctuations in latency where the connection speed varies unpredictably (sometimes high, sometimes low).
 
-### 4. Network Topologies (Network Structure)
+Latency: The time taken for data to travel from source to destination.
+
+Bandwidth: The maximum amount of data that can travel in one second.
+
+Throughput: The actual speed of data transfer achieved over the network.
+
+Jitter: The "mood swings" of the network—fluctuations in latency where the connection speed varies unpredictably (sometimes high, sometimes low).
+
+4. Network Topologies (Network Structure)
+
 The physical or logical order in which a network is connected. Proper structure improves network visibility and defense.
-*   **Star:** All devices connect to a central hub/switch.
-*   **Bus:** All devices share a single communication cable.
-*   **Ring:** Devices are connected in a closed loop.
-*   **Mesh:** Devices interconnect, providing multiple paths for data (highly resilient).
 
-### 5. Internet Communication Models
-*   **Client-Server:** Centralized model where clients request resources from a central server.
-*   **Peer-to-Peer (P2P):** Decentralized model where devices share resources directly with each other.
+Star: All devices connect to a central hub/switch.
 
----
+Bus: All devices share a single communication cable.
 
-### 6. The OSI Model (7 Layers)
-Understanding this model is crucial for incident response. When an alert triggers, you must know *which* layer is being attacked.
-1.  **Physical:** Cables, electrical signals, and hardware.
-2.  **Data Link:** MAC addresses, switching, and frames.
-3.  **Network:** IP addresses and routing.
-4.  **Transport:** TCP/UDP, data delivery reliability.
-5.  **Session:** Maintaining connections between devices.
-6.  **Presentation:** Data formatting, encryption, and compression.
-7.  **Application:** End-user interfaces (HTTP, FTP, DNS).
+Ring: Devices are connected in a closed loop.
 
-*   **Encapsulation:** The process of adding headers to data as it travels down the OSI layers. Each header acts like an ID tag or shipping label, telling the network exactly where the data is going.
+Mesh: Devices interconnect, providing multiple paths for data (highly resilient).
 
-### 7. The TCP/IP Model
+5. Internet Communication Models
+
+Client-Server: Centralized model where clients request resources from a central server.
+
+Peer-to-Peer (P2P): Decentralized model where devices share resources directly with each other.
+
+6. The OSI Model (7 Layers)
+
+Understanding this model is crucial for incident response. When an alert triggers, you must know which layer is being attacked.
+
+1. Physical: Cables, electrical signals, and hardware.
+
+2. Data Link: MAC addresses, switching, and frames.
+
+3. Network: IP addresses and routing.
+
+4. Transport: TCP/UDP, data delivery reliability.
+
+5. Session: Maintaining connections between devices.
+
+6. Presentation: Data formatting, encryption, and compression.
+
+7. Application: End-user interfaces (HTTP, FTP, DNS).
+
+Encapsulation: The process of adding headers to data as it travels down the OSI layers. Each header acts like an ID tag or shipping label, telling the network exactly where the data is going.
+
+7. The TCP/IP Model
+
 The modern, practical version of the OSI model used in real-world networking.
-1.  Application
-2.  Transport
-3.  Internet
-4.  Network Access
 
----
+1. Application
 
-### 8. Hardware & Cabling
-*   **Transceiver:** A device that both transmits and receives signals.
-*   **Connectors:**
-    *   **RJ45:** Standard LAN port.
-    *   **RJ11:** Telephone port.
-    *   **SFP (Small Form-factor Pluggable):** A compact transceiver used in network switches.
-    *   **QSFP (Quad SFP):** A faster, higher-density version of SFP.
-*   **Power over Ethernet (PoE):** Delivers electrical power alongside data over a single cable.
-*   **Cables:** Cat5, Cat5e, and Cat6 dictate the maximum link speed and bandwidth capacity.
+2. Transport
 
----
+3. Internet
 
-### 9. The Data Link Layer (Layer 2)
+4. Network Access
+
+8. Hardware & Cabling
+
+Transceiver: A device that both transmits and receives signals.
+
+Connectors:
+
+RJ45: Standard LAN port.
+
+RJ11: Telephone port.
+
+SFP (Small Form-factor Pluggable): A compact transceiver used in network switches.
+
+QSFP (Quad SFP): A faster, higher-density version of SFP.
+
+Power over Ethernet (PoE): Delivers electrical power alongside data over a single cable.
+
+Cables: Cat5, Cat5e, and Cat6 dictate the maximum link speed and bandwidth capacity.
+
+9. The Data Link Layer (Layer 2)
+
 This layer is heavily targeted in real-world exploits because it controls local network access.
 
-#### Ethernet Frames & MAC Addresses
-*   **Destination MAC:** Where the data is going.
-*   **Source MAC:** Where the data came from.
-*   **Payload:** The actual data being sent.
-*   **CRC (Cyclic Redundancy Check):** Error-checking mechanism to ensure data wasn't corrupted in transit.
+Ethernet Frames & MAC Addresses
 
-#### Switching Logic
-*   **CAM Tables (Content Addressable Memory):** Switches use these tables to map MAC addresses to specific physical port locations.
+Destination MAC: Where the data is going.
 
-#### Switch Behaviors (and Exploitation)
-*   **Learning:** The switch learns which MAC address is on which port.
-*   **Flooding:** If a switch doesn't know a MAC address, it sends the data to all ports. 
-    *   *Real-world exploit:* Attackers use **MAC Flooding** to overwhelm a switch's CAM table, forcing it to act like a hub and flood traffic, allowing the attacker to sniff packets (Network visibility becomes compromised here).
-    *   *Effective Incident Response:* Defenders monitor CAM table overflows and implement port security to block unauthorized MAC addresses.
+Source MAC: Where the data came from.
 
-#### Spanning Tree Protocol (STP)
-*   Think of STP as the "police" of the network. It prevents traffic loops by blocking redundant paths, ensuring data doesn't circle the network endlessly.
+Payload: The actual data being sent.
 
-#### Network Segmentation
-*   **VLAN (Virtual Local Area Network):** Logically separating a network into smaller, isolated broadcast domains.
-*   **802.1Q Tagging:** The protocol standard used to tag Ethernet frames so the switch knows which VLAN they belong to.
-    *   *Security note:* VLANs improve network visibility and structure. If a real-world exploit occurs in one VLAN, proper segmentation prevents it from easily spreading to others (limiting lateral movement).
+CRC (Cyclic Redundancy Check): Error-checking mechanism to ensure data wasn't corrupted in transit.
 
----
-*(Note: Video ended at 31:58 for the day)*
-```
+Switching Logic
+
+CAM Tables (Content Addressable Memory): Switches use these tables to map MAC addresses to specific physical port locations.
+
+Switch Behaviors
+
+Learning: The switch learns which MAC address is on which port.
+
+Flooding: If a switch doesn't know a MAC address, it sends the data to all ports.
+
+Real-world exploit: Attackers use MAC Flooding to overwhelm a switch's CAM table, forcing it to act like a hub and flood traffic, allowing the attacker to sniff packets (Network visibility becomes compromised here).
+
+Effective Incident Response: Defenders monitor CAM table overflows and implement port security to block unauthorized MAC addresses.
+
+Spanning Tree Protocol (STP)
+
+Think of STP as the "police" of the network. It prevents traffic loops by blocking redundant paths, ensuring data doesn't circle the network endlessly.
+
+Network Segmentation
+
+VLAN (Virtual Local Area Network): Logically separating a network into smaller, isolated broadcast domains.
+
+802.1Q Tagging: The protocol standard used to tag Ethernet frames so the switch knows which VLAN they belong to.
+
+Security note: VLANs improve network visibility and structure. If a real-world exploit occurs in one VLAN, proper segmentation prevents it from easily spreading to others (limiting lateral movement).
+
+(Note: Video ended at 31:58 for the day)
