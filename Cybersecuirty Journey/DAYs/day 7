@@ -1,5 +1,4 @@
 
-
 # Networking Fundamentals: Structure, Visibility, and Security
 
 **Networking is the foundation of all attacks.** To understand how attackers infiltrate systems or how defenders build effective incident response, you must first understand how data moves. Network visibility and structure dictate whether an attack goes unnoticed or is immediately caught.
@@ -94,3 +93,4 @@ This layer is heavily targeted in real-world exploits because it controls local 
 
 ---
 *(Note: Video ended at 31:58 for the day)*
+```
