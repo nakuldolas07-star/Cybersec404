@@ -1,2 +1,70 @@
 networking , foundation of all attacks and network visbility and stucture , effective inscident response  and 
   real world expoit
+first ips made by ARPANET
+types of network  most common are lan,wan,man,pan
+data transfer term , latency -time taken from data travel 
+bandwith data travel in 1 sec
+throughput actuual speed of internet
+jitter  moodswings of internet sometimes low somtimes high
+topology  the order of whihc internet is conected types ,star ,bus,ring,mesh network topology
+
+internet comuntiacion , clinet-server or peer to peer
+
+
+(osi model)
+7 layers 
+1st layer is phycial
+2nd layer is data
+3rd layeer is network
+4th layer is transport
+5th layer is sesion
+6th layer is presnation
+7th layer is application
+
+
+encapsulation is the process the data add headers while travel like the id where each time data trave
+
+tcp\ip model the modern osi model
+appication
+transport
+internet
+network access
+
+
+
+transreciver
+
+rj45-> lan port
+rj11
+spf conectior 
+qsfp
+
+
+link of speed and power over ethernet
+
+cat 5 ,cat5e ,cat6
+
+
+
+
+now data link layer 
+ethernet frame and mac adresses 
+
+mac desiation , source mac, payload, crc {eroor check}
+swithcing logic 
+
+cam tables _- mac adresss port loaction
+learing - fuction of ip
+flooding - random trying to enter in network which alerts the systerm
+
+
+spannng tree portecol (the police  for all not realy just the guy )
+
+
+vlan virtal local area network 
+
+
+802.1q tagging  
+
+
+(video ended at 31:58 for the day)
