@@ -1,0 +1,28 @@
+learn form 31:58 
+1-q tagging for identification the header
+collison basiclly a deadlock
+
+ip adressing and subnetting
+ip is identificaion of anything using internet
+
+IPv4 --local host  127.0.0.1 total count is 4 billon 
+IPV6 --future proof 
+mac adresss hardware adress (media accesss contorl) can never change
+
+
+ip classes
+A . 0-126  for  big organisation
+B. 128-191 for medium org
+c. 192-223 for office
+e.224-239 for mulitcast
+d. 240-255 for labs 
+
+
+
+ip header
+
+source ip 
+desitiantion  ip 
+ttl
+protocol
+
