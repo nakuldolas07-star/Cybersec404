@@ -1,28 +1,91 @@
-learn form 31:58 
-1-q tagging for identification the header
-collison basiclly a deadlock
+Networking Fundamentals Part 2: Layer 3, Addressing, and Infrastructure
 
-ip adressing and subnetting
-ip is identificaion of anything using internet
+Networking is the foundation of all attacks. As we move up the stack, understanding how devices are identified and routed becomes critical. Network visibility at Layer 3 (Network Layer) allows defenders to trace malicious packets back to their source, making it essential for effective incident response.
 
-IPv4 --local host  127.0.0.1 total count is 4 billon 
-IPV6 --future proof 
-mac adresss hardware adress (media accesss contorl) can never change
+1. Layer 2 Concepts (Continued)
 
+802.1Q Tagging: Adds a specific header to Ethernet frames for VLAN identification. This header tells the switch exactly which VLAN the traffic belongs to.
 
-ip classes
-A . 0-126  for  big organisation
-B. 128-191 for medium org
-c. 192-223 for office
-e.224-239 for mulitcast
-d. 240-255 for labs 
+Collision: Basically a network deadlock. It happens when two devices try to send data on the same network segment at the exact same time, causing the data to corrupt. Switches mitigate this by giving each port its own collision domain.
 
+2. IP Addressing & Subnetting
 
+An IP (Internet Protocol) address is the logical identification of anything connected to a network.
 
-ip header
+IPv4: The traditional format (e.g., 192.168.1.1). It has a total address count of roughly 4 billion.
 
-source ip 
-desitiantion  ip 
-ttl
-protocol
+Localhost: The IP address 127.0.0.1 is reserved as the loopback address, meaning "this computer itself."
 
+IPv6: Created to be future-proof, offering a practically unlimited number of IP addresses to accommodate the growing Internet of Things.
+
+MAC Address (Media Access Control): The physical hardware address associated with a network interface. Unlike an IP address, a MAC address is generally intended to be unique, though it can be temporarily spoofed.
+
+3. IP Classes (Traditional Classful Addressing)
+
+Knowing IP classes helps in network visibility, as it dictates the scale of the network you are investigating.
+
+Class A (1.0.0.0 - 126.255.255.255): For massive organizations.
+
+Class B (128.0.0.0 - 191.255.255.255): For medium-sized organizations.
+
+Class C (192.0.0.0 - 223.255.255.255): For small offices and home networks.
+
+Class D (224.0.0.0 - 239.255.255.255): Reserved for multicast, sending data to multiple destinations at once.
+
+Class E (240.0.0.0 - 255.255.255.255): Reserved for experimental and lab use.
+
+4. The IP Header
+
+When data is encapsulated at Layer 3, an IP header is attached. Analyzing this header is a core part of incident response. Key fields include:
+
+Source IP: Where the packet came from.
+
+Destination IP: Where the packet is going.
+
+TTL (Time to Live): A countdown timer, usually starting at values such as 64 or 128, that decreases by 1 at every router. If it reaches 0, the packet is dropped.
+
+Protocol: Identifies the Layer 4 protocol being used (e.g., TCP = 6, UDP = 17).
+
+Checksum: An error-checking mechanism to ensure the IP header wasn't corrupted in transit.
+
+5. ARP (Address Resolution Protocol)
+
+Function: ARP resolves IP addresses to MAC addresses. Devices use ARP to find the hardware address of another device on the local network before sending data.
+
+Proxy ARP: A device answers ARP requests on behalf of another device, allowing traffic to be routed through itself.
+
+Real-World Exploit: ARP Spoofing
+
+Attack: An attacker sends fake ARP messages to a target, linking their own MAC address to the IP address of a legitimate device, such as a gateway router.
+
+Impact: The attacker can potentially become a Man-in-the-Middle (MitM) and intercept traffic.
+
+Incident Response: Defenders can use Dynamic ARP Inspection (DAI) to validate ARP messages, block unauthorized replies, and detect spoofing attempts.
+
+6. Networking Devices
+
+Understanding how traffic flows through these devices is vital for tracking an attacker's path.
+
+Hub: A basic device that broadcasts incoming traffic to all ports. It has a high collision rate.
+
+Switch: A smart device that uses MAC addresses and CAM tables to forward traffic only to the intended port.
+
+Router: Connects different networks together and routes traffic based on IP addresses.
+
+Bridge: Connects two separate network segments into one logical network while filtering traffic between them.
+
+7. VLAN Ports & Security
+
+Access Port: Assigned to a single VLAN. Used for connecting end devices such as PCs and printers. It strips the VLAN tag before sending data to the device.
+
+Trunk Port: Carries traffic for multiple VLANs between switches. It keeps the 802.1Q tags intact.
+
+Security Note: VLAN hopping attacks can target misconfigured trunk ports in an attempt to cross network boundaries.
+
+8. Firewalls
+
+A firewall is a network security device that monitors and filters incoming and outgoing network traffic based on an organization's established security policies.
+
+It acts as a security boundary between trusted internal networks and untrusted external networks and is an important component of network defense and incident response.
+
+(Note: Video ended at 27:01 of the day)
