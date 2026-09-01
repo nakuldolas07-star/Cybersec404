@@ -1,0 +1,87 @@
+```text
+Networking Fundamentals Part 3: Binary, Subnetting, and Network Boundaries
+
+Networking is the foundation of all attacks. Understanding how IP addresses are constructed at the binary level is crucial for network visibility. Defenders and attackers alike use subnetting to map out network boundaries, identify live hosts, and determine the scope of a real-world exploit. Effective incident response relies on knowing exactly which subnet an attack originated from.
+
+1. Numeric to Binary Conversion
+
+Computers process data in binary (1s and 0s). To understand IP addressing, you must understand how to convert decimal numbers to binary using positional values.
+
+The 8-bit binary position values are:
+
+128 | 64 | 32 | 16 | 8 | 4 | 2 | 1
+
+How it works:
+
+If a number fits into the positional value, it becomes a 1. If it doesn't, it becomes a 0.
+
+Example: Converting 77 to Binary
+
+Is 77 >= 128? No. (0) -> 77 - 0 = 77
+
+Is 77 >= 64? Yes. (1) -> 77 - 64 = 13
+
+Is 13 >= 32? No. (0) -> 13 - 0 = 13
+
+Is 13 >= 16? No. (0) -> 13 - 0 = 13
+
+Is 13 >= 8? Yes. (1) -> 13 - 8 = 5
+
+Is 5 >= 4? Yes. (1) -> 5 - 4 = 1
+
+Is 1 >= 2? No. (0) -> 1 - 0 = 1
+
+Is 1 >= 1? Yes. (1) -> 1 - 1 = 0
+
+Result: 77 in binary is 01001101.
+
+Note: The maximum value of an 8-bit octet is 255 (11111111). This is why IPv4 octets only go up to 255, which can later be converted to hexadecimal for MAC/IP representations.
+
+2. IPv4 Range
+
+An IPv4 address consists of 4 octets (8 bits each), separated by dots.
+
+Total Range: 0.0.0.0 to 255.255.255.255
+
+Incident Response Note: When analyzing logs, seeing an IP like 0.0.0.0 often indicates an unknown or unassigned source, while 255.255.255.255 indicates a broadcast.
+
+3. The ANDing Process
+
+When a device wants to send data, it must determine if the destination is on the same local network or a remote network. It does this using the ANDing process.
+
+How it works: The computer compares its own IP address with its Subnet Mask using binary AND logic.
+
+1 AND 1 = 1
+
+1 AND 0 = 0
+
+0 AND 0 = 0
+
+Result: The ANDing process produces the Network Address. If the destination network address matches the sender's network address, they communicate directly. If not, the data is sent to the router.
+
+Network Visibility: Incident responders use the ANDing process manually to figure out which specific subnet a malicious IP belongs to when analyzing packet captures (PCAPs).
+
+4. The Broadcast Address
+
+Definition: The highest IP address in a subnet, used to send a single packet to every device on that specific network.
+
+Real-world Exploit: Attackers can abuse broadcast addresses for Smurf attacks or amplification attacks, sending large numbers of ICMP echo requests to overwhelm a network.
+
+Incident Response: Defenders block directed broadcast traffic at the router to help prevent these attacks.
+
+5. CIDR (Classless Inter-Domain Routing)
+
+Traditional IP classes (A, B, C) were too rigid and wasted too many IP addresses. CIDR was introduced to allow networks to be divided into more flexible sizes.
+
+CIDR Notation: Written as a slash followed by a number (e.g., /24).
+
+What it means: The number represents how many bits are allocated to the Network portion of the IP address.
+
+Example: 192.168.1.0/24 means the first 24 bits are the network. The remaining 8 bits are for hosts.
+
+Subnet Mask: A /24 translates to a subnet mask of 255.255.255.0.
+
+Effective Incident Response: CIDR notation is used to define network ranges for security monitoring, firewall rules, network segmentation, and authorized security assessments. Proper segmentation helps limit the spread of an incident between separate network ranges or VLANs.
+
+(Note: Video ended at 1:27:44 for the day)
+```
