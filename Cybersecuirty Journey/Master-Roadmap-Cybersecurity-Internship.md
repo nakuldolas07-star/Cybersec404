@@ -225,15 +225,3 @@ This merges the full technical skill list with the career-side actions (portfoli
 | Traffic Analysis | Wireshark, tcpdump |
 | Practice Platforms | TryHackMe, HackTheBox, OverTheWire, picoCTF |
 | Docs/Notes | Obsidian, Notion, CherryTree |
-
----
-
-## THINGS THAT QUIETLY KILL YOUR CHANCES
-
-- Tutorial hell — watching walkthroughs without struggling first
-- No writeups/portfolio — unverifiable claims mean nothing to interviewers
-- Generic, un-tailored applications sent in bulk
-- Skipping networking fundamentals to "get to the hacking part" faster
-- Waiting to feel "ready" before applying — start applying in Week 5-6, in parallel with learning, not after
-
----
