@@ -1,33 +1,30 @@
-# Master Roadmap v2: Zero to Paid Cybersecurity Internship (Complete A-to-Z)
-### Red Team / Ethical Hacking / Network Penetration Testing Track — Fully Merged & Sequenced
+# The Complete Ethical Hacker Roadmap: Zero to Elite
+### Red Team / Penetration Testing / Offensive Security — Full Skill Progression
 
-This is your **single source of truth**. It merges your original 8-week plan with every gap identified from community-sourced material (Reddit r/AskNetsec, r/netsecstudents, r/oscp, Quora, Twitter/X infosec circles, PortSwigger/THM/HTB community norms). Nothing from either version is dropped — everything is placed in the order you should actually learn it. Follow it top to bottom.
-
-Timeline note: original core (Phases 0-6) is ~8 weeks if you go hard. The added material (marked **[NEW]**) extends this to roughly **10-12 weeks** for real depth. If you must hit 8 weeks for an application deadline, use the "8-week vs 12-week" markers at the end of each phase.
+This roadmap is organized by **skill tier**, not by calendar time — progress when you've actually mastered a tier's checkpoint, not on a schedule. Every concept is sequenced so each tier builds directly on the last. Nothing is skipped.
 
 ---
 
-## PHASE 0 — Setup & Ground Rules (Day 1, before anything else)
+## TIER 0 — Setup & Non-Negotiable Ground Rules
 
 ### Environment
-- Install VirtualBox or VMware (free tier is fine)
+- Install VirtualBox or VMware
 - Install Kali Linux as your primary attack VM
 - Download Metasploitable2 and 2-3 easy TryHackMe/HackTheBox targets as practice victims
-- Create accounts: GitHub, TryHackMe, Hack The Box, LinkedIn
-- **[NEW]** Also create: HackerOne and Bugcrowd accounts (dormant for now, you'll use them in Phase 6)
-- Set up a notes system: Obsidian, Notion, or CherryTree — document literally everything from today onward
+- Create accounts: GitHub, TryHackMe, Hack The Box
+- Set up a notes system: Obsidian, Notion, or CherryTree — document literally everything from day one
 
-### Legal/Ethical Baseline (non-negotiable — learn this Day 1)
+### Legal & Ethical Baseline (learn this before anything else)
 - Only attack systems you own or are explicitly authorized to test (your own VMs, TryHackMe/HTB labs, or a signed scope-of-work). Attacking anything else is a crime, not a grey area.
-- Understand "scope," "rules of engagement," and "authorization" — you will be asked about this in interviews as a filter question.
-- Interviewers specifically probe for whether you understand the difference between a hacker and a criminal. Knowing this cold is a credibility signal.
-- **[NEW]** Extend this mindset now to every later phase: wireless attacks, social engineering, and bug bounty work all have their own scope rules — "authorized" always means something specific and written, never assumed.
+- Understand what "scope," "rules of engagement," and "authorization" mean in a real engagement.
+- This mindset applies to every tier below — wireless attacks, social engineering, and real-world testing all have their own scope rules. "Authorized" always means something specific and written, never assumed.
+- Knowing the line between a hacker and a criminal cold, and being able to articulate it, is foundational to being taken seriously in this field at any level.
 
 ---
 
-## PHASE 1 — Unbreakable Foundations (Weeks 1-2)
+## TIER 1 — Unbreakable Foundations
 
-You cannot hack what you don't understand. Do not rush this phase.
+You cannot hack what you don't understand. Do not rush this tier no matter how tempting it is to jump to "real hacking."
 
 ### 1. Computer Networking
 - OSI Model & TCP/IP Model — what happens at every layer, not just names
@@ -45,32 +42,32 @@ You cannot hack what you don't understand. Do not rush this phase.
 
 ### 2. Linux Fundamentals
 - Navigation: `ls`, `cd`, `pwd`, `cp`, `mv`, `rm`, `find`, `locate`
-- Permissions/ownership: `chmod`, `chown`, understanding rwx for user/group/other
+- Permissions/ownership: `chmod`, `chown`, rwx for user/group/other
 - Text processing: `grep`, `awk`, `sed`, `cat`, `less`, `tail`, `head`
 - System management: `ps`, `top`/`htop`, `kill`, `systemctl`, `apt`/`yum`
 - User/group management: `useradd`, `usermod`, `passwd`, `sudo` configuration
-- Bash scripting: loops, variables, if-statements — write 2-3 small automation scripts this week
-- File system hierarchy: know what `/etc`, `/var`, `/tmp`, `/home`, `/bin` are for
+- Bash scripting: loops, variables, if-statements — write several small automation scripts
+- File system hierarchy: `/etc`, `/var`, `/tmp`, `/home`, `/bin`
 
 ### 3. Windows Fundamentals
 - Windows architecture: registry, services, processes, threads
 - CMD basics: `dir`, `cd`, `ipconfig`, `netstat`, `tasklist`, `taskkill`
 - PowerShell basics: cmdlets, `Get-Help`, `Get-Command`, simple scripts
-- Active Directory concepts (intro level — deeper AD comes in Phase 4b):
+- Active Directory concepts (intro level — deeper AD comes in Tier 4):
   - Domains, trees, forests
   - Domain Controllers (DC)
   - Users, groups, computers, Organizational Units (OUs)
   - Group Policy Objects (GPOs)
-  - Authentication protocols: NTLM, Kerberos (high-level understanding is enough for now)
+  - Authentication protocols: NTLM, Kerberos (high-level understanding for now)
 
-### Practice for this phase
+### Practice
 TryHackMe "Network Fundamentals" + "Linux Fundamentals" (1-3) + OverTheWire "Bandit" (first 15+ levels)
 
-**Week 1-2 checkpoint**: You can navigate Kali entirely by terminal, explain the TCP handshake and OSI model unprompted, subnet by hand, and describe what a Domain Controller does.
+**Tier 1 checkpoint**: You can navigate Kali entirely by terminal, explain the TCP handshake and OSI model unprompted, subnet by hand, and describe what a Domain Controller does.
 
 ---
 
-## PHASE 2 — Offensive Methodologies & Reconnaissance (Week 3)
+## TIER 2 — Offensive Methodology & Reconnaissance
 
 ### 4. Information Gathering (OSINT)
 - Passive recon: WHOIS lookups, DNS enumeration, Google Dorking (advanced search operators)
@@ -88,14 +85,14 @@ TryHackMe "Network Fundamentals" + "Linux Fundamentals" (1-3) + OverTheWire "Ban
 - Web enumeration: directory brute-forcing with Gobuster, Dirb, Feroxbuster
 - Vulnerability scanning basics: Nessus (free tier), Nikto
 
-### Practice for this phase
-Do recon-and-enumeration-only against 5-8 easy boxes before touching exploitation — this discipline (fully map before you attack) is exactly what separates "script kiddie" from someone who understands methodology, and interviewers notice the difference.
+### Practice
+Do recon-and-enumeration-only against 5-8 easy boxes before touching exploitation — fully mapping a target before attacking is exactly what separates real methodology from guesswork.
 
-**Week 3 checkpoint**: Given a target IP with zero info, you can independently produce a clean recon report (open ports, services, versions, likely attack surface) in under 20 minutes.
+**Tier 2 checkpoint**: Given a target IP with zero info, you can independently produce a clean recon report (open ports, services, versions, likely attack surface) in under 20 minutes.
 
 ---
 
-## PHASE 3 — Exploitation & Initial Access (Weeks 4-5)
+## TIER 3 — Exploitation & Initial Access
 
 ### 6. Network Penetration Testing
 - Metasploit Framework:
@@ -105,7 +102,7 @@ Do recon-and-enumeration-only against 5-8 easy boxes before touching exploitatio
 - ExploitDB / `searchsploit` — finding public exploits for identified services
 - Practice against known vulnerable services: vsftpd, ProFTPd, Samba, EternalBlue/MS17-010
 
-### 7. Web Application Hacking (OWASP Top 10) — single most important block for entry-level roles
+### 7. Web Application Hacking — OWASP Top 10 (the single most important skill block in this entire roadmap)
 - Burp Suite — master this: proxy setup, intercepting requests, Repeater, Intruder
 - SQL Injection: error-based, union-based, blind (boolean/time-based); automate with `sqlmap` but understand it manually first
 - Cross-Site Scripting (XSS): reflected, stored, DOM-based
@@ -115,40 +112,35 @@ Do recon-and-enumeration-only against 5-8 easy boxes before touching exploitatio
 - Authentication Bypass: default creds, logic flaws, brute-forcing with Hydra/Burp Intruder
 - IDOR, CSRF, SSRF, Broken Access Control — know all 10, not just the famous 3
 
-### 7b. **[NEW]** API Security (its own OWASP Top 10 now — don't treat as identical to web app testing)
+### 8. API Security (its own discipline now, not identical to general web testing)
 - REST vs GraphQL basics
 - Broken Object Level Authorization (BOLA) — the single most common real-world API vuln
-- Tools: Postman, Burp Suite API-focused extensions, `Kiterunner` for endpoint discovery
+- Tools: Postman, Burp Suite API extensions, `Kiterunner` for endpoint discovery
 - Rate limiting bypass; JWT attacks (`alg:none`, weak secret brute-forcing with `jwt_tool`)
-- SSRF via API endpoints is a very common real-world chain into cloud credential theft (ties into Phase 4c)
+- SSRF via API endpoints is a very common chain into cloud credential theft (ties into Tier 5)
 
-### 8. Password Attacks & Cracking
+### 9. Password Attacks & Cracking
 - Hashing concepts: MD5, SHA family, NTLM, bcrypt — know which is "crackable fast" vs not
-- Hash identification (recognize hash types before attacking them)
+- Hash identification before attacking
 - Online attacks: brute-forcing SSH/FTP/web logins with Hydra
 - Offline cracking: Hashcat or John the Ripper with wordlists (rockyou.txt)
 - Wordlist generation: CeWL, Mentalist
 
-**Week 4-5 checkpoint**: You've fully compromised (recon → exploit → shell) at least 10 machines across a mix of network and web-based challenges, with notes on each.
-
----
-
-## PHASE 3.5 — **[NEW]** Wireless Network Attacks (Week 5, slot in alongside password attacks)
-
-Skipped in most beginner roadmaps, then asked about in interviews anyway.
-
+### 10. Wireless Network Attacks
 - 802.11 basics: management/control/data frames, WPA2 4-way handshake, WPA3 differences
 - Tools: `aircrack-ng` suite, `Wifite`, `Kismet`, `Bettercap`
 - Attacks: handshake capture + offline crack, Evil Twin / rogue AP, deauth attacks, WPS PIN attacks (Reaver)
-- Concept-level only (no hardware needed yet): Bluetooth (BLE) sniffing, RFID/NFC cloning — just know what these terms mean when they come up
+- Concept-level (hardware not required yet): Bluetooth (BLE) sniffing, RFID/NFC cloning
+
+**Tier 3 checkpoint**: You've fully compromised (recon → exploit → shell) at least 10-15 machines across a mix of network, web, and wireless-based challenges, with notes on each.
 
 ---
 
-## PHASE 4 — Post-Exploitation & Privilege Escalation (Weeks 5-6)
+## TIER 4 — Post-Exploitation, Privilege Escalation & Active Directory
 
-You're in as a low-priv user. Now you become root/SYSTEM — this is what most beginners never practice, and it's a huge differentiator.
+You're in as a low-priv user. Now you become root/SYSTEM — this is where most self-taught people stop practicing, and it's a massive skill differentiator.
 
-### 9. Linux Privilege Escalation
+### 11. Linux Privilege Escalation
 - Enumeration: LinPEAS, manual LinEnum
 - Sudo misconfigurations (e.g. `sudo find`, `sudo vim` → check GTFOBins)
 - SUID/SGID binary abuse
@@ -156,146 +148,119 @@ You're in as a low-priv user. Now you become root/SYSTEM — this is what most b
 - PATH variable hijacking
 - Kernel exploits (e.g. Dirty Cow) — know the concept even if you don't run every CVE
 
-### 10. Windows Privilege Escalation
+### 12. Windows Privilege Escalation
 - Enumeration: WinPEAS, PowerUp
 - Unquoted service paths
 - Weak service permissions (modifying a service binary path)
 - AlwaysInstallElevated MSI abuse
 - Stored credentials in registry/config files/Credential Manager
-- Token impersonation basics (RoguePotato/JuicyPotato — concept-level is fine)
+- Token impersonation basics (RoguePotato/JuicyPotato — concept-level is fine here)
 
-### 11. Active Directory Exploitation (Intro)
+### 13. Active Directory Exploitation — Foundations
 - Enumeration: BloodHound + SharpHound to map attack paths
 - AS-REP Roasting, Kerberoasting (extracting hashes for offline cracking)
 - Lateral movement: Pass-the-Hash (PtH)
 - Tooling: CrackMapExec (CME), Impacket suite (`psexec.py`, `wmiexec.py`, `secretsdump.py`)
 
-### 11b. **[NEW]** Active Directory — Going Deeper (interviewers increasingly expect this beyond "intro")
-- Delegation attacks (unconstrained/constrained/RBCD) — concept level is enough
-- Golden Ticket / Silver Ticket — know what they are and why they're dangerous
-- DCSync and `mimikatz` — know what it extracts and why (interview/concept topic; only run in your own lab, never outside authorized scope)
-- Tooling to add: `PowerView`, `Rubeus` (concept level, real usage later)
+### 14. Active Directory Exploitation — Advanced
+- Delegation attacks (unconstrained/constrained/RBCD)
+- Golden Ticket / Silver Ticket — know what they are, why they're dangerous, and how they're detected
+- DCSync and `mimikatz` — know exactly what's extracted and why (run only in your own authorized lab)
+- Tooling: `PowerView`, `Rubeus`
+- Trust relationship abuse across domains/forests — concept level, this is genuinely elite-tier material
 
-**Week 5-6 checkpoint**: You can take a low-priv shell on a Linux or Windows box and independently escalate to root/SYSTEM on at least 5 different machines using different techniques (not the same trick every time), AND explain one delegation-based AD attack conceptually even if you haven't executed it yet.
+**Tier 4 checkpoint**: You can take a low-priv shell on a Linux or Windows box and independently escalate to root/SYSTEM on at least 5-8 different machines using different techniques each time, and you can explain (and, in your own lab, execute) at least one advanced AD attack chain end to end.
 
 ---
 
-## PHASE 4b — **[NEW]** Mobile Application Pentesting (Week 6-7)
+## TIER 5 — Specialized Attack Surfaces
 
+### 15. Mobile Application Pentesting
 - Android architecture: APK structure, Manifest, activities/intents
-- Tools: `MobSF` (automated static/dynamic analysis — best starting point), `jadx` (decompiling), `apktool`, `Frida` (runtime instrumentation/hooking)
+- Tools: `MobSF` (automated static/dynamic analysis), `jadx` (decompiling), `apktool`, `Frida` (runtime instrumentation/hooking)
 - Intercepting traffic: Burp Suite + rooted emulator or Genymotion
-- OWASP Mobile Top 10 (run in parallel with the web OWASP Top 10 you already know)
-- iOS: know it exists, know jailbreak-based testing is the norm — don't go deep unless you own a Mac; this is a "know the landscape" item, not a mastery item yet
+- OWASP Mobile Top 10 (run in parallel with the web OWASP Top 10)
+- iOS: jailbreak-based testing is the standard approach — go deeper here if you have a Mac available
 
----
-
-## PHASE 4c — **[NEW]** Cloud Security Basics (Week 7)
-
-Increasingly asked about even in junior interviews, and it's where a lot of real-world SSRF/API chains actually land (ties back to Phase 7b).
-
+### 16. Cloud Security
 - AWS fundamentals: IAM misconfigurations, S3 bucket exposure, security groups
 - Tools: `ScoutSuite`, `Prowler` (misconfiguration scanners), `Pacu` (AWS exploitation framework)
-- Concepts: shared responsibility model, cloud metadata service abuse (SSRF → credential theft is one of the most common real chains today), container basics (Docker escape concepts, misconfigured Kubernetes at a high level)
-- TryHackMe has a dedicated AWS/cloud track — efficient way to check this box without spinning up your own AWS bill
+- Concepts: shared responsibility model, cloud metadata service abuse (SSRF → credential theft is one of the most common real-world chains today), container basics (Docker escape concepts, misconfigured Kubernetes)
+- Azure and GCP equivalents — worth knowing the landscape exists even if AWS is your primary focus
+
+### 17. Binary Exploitation & Reverse Engineering
+- Buffer overflow concept (stack-based), how `EIP`/`RIP` gets overwritten, ASLR/DEP/stack canaries as mitigations
+- Tools: `gdb`, `pwndbg`, `ghidra`, `IDA Free`
+- Format string vulnerabilities, basic ROP (Return-Oriented Programming) chains
+- This is a genuinely deep specialization — most generalist pentesters only go conceptually deep here, but elite-level offensive security requires real fluency in this tier
+
+### 18. Exploit Development & Malware Concepts
+- Understanding how public exploits (from ExploitDB) are constructed, not just how to run them
+- Shellcoding basics
+- Antivirus/EDR evasion concepts: signature-based vs behavioral detection, why obfuscation and living-off-the-land techniques work
+- **Important boundary**: this tier is about understanding offense deeply enough to defend and to operate within authorized red-team engagements — not about building tools to use outside authorized scope
 
 ---
 
-## PHASE 5 — Professional Skills (Runs in Parallel From Week 2 Onward)
+## TIER 6 — Professional Craft (Runs Continuously Alongside Every Tier Above)
 
-### 12. Scripting & Automation
-- Python: custom port scanners, API interaction, JSON/XML parsing
+### 19. Scripting & Automation
+- Python: custom port scanners, API interaction, JSON/XML parsing, exploit PoC scripting
 - Bash: automate Nmap scans, parse output
-- PowerShell: basic reverse shells, AD enumeration scripts
-- Git/GitHub basics: commit, push, branch, write a real README — your portfolio lives here
+- PowerShell: AD enumeration scripts, offensive tooling
+- Git/GitHub: commit, push, branch, write real documentation — your work lives here
 
-### 13. Documentation & Reporting
+### 20. Documentation & Reporting
 - Markdown for clean notes
-- Note-taking discipline: log every command, every "aha," every failure (failures make the best writeup material — they show real methodology, not luck)
-- Report writing: translate technical findings (XSS, LFI, PrivEsc) into business risk language for a non-technical audience — this is explicitly screened for by hiring managers and almost no self-taught beginner practices it
-- Proof of Concept discipline: screenshot everything, capture flags as evidence
+- Note-taking discipline: log every command, every "aha," every failure — failures make the best writeup material because they show real methodology
+- Report writing: translate technical findings into business risk language for a non-technical audience — this single skill separates a technician from a true security professional
+- Proof of Concept discipline: screenshot everything, capture evidence properly
 
-### 14. Operating Systems for Hackers
-- Kali Linux — know your pre-installed toolset well enough to not need to Google basic tool locations
-- Parrot OS — worth knowing exists as an alternative, not required to switch
-
-### 15. **[NEW]** Social Engineering & Physical Security (expanded from a one-line mention)
-- Phishing infrastructure concepts: `Gophish` (framework — lab/authorized use only)
+### 21. Social Engineering & Physical Security
+- Phishing infrastructure concepts: `Gophish` (framework — authorized lab use only)
 - Pretexting, tailgating, USB drop concepts
-- Heavily ethics-sensitive: always frame any writeup or discussion as "simulated, authorized engagement"
+- Always simulated and authorized — this is the most trust-sensitive skill in the entire field
 
-### 16. **[NEW]** Evasion & Defensive Awareness (know the concepts — don't weaponize)
-This exists so you understand *why* defenses fail, which is a real interview differentiator:
-- Signature-based vs behavioral AV/EDR detection, at a conceptual level
-- Blue team basics: what a SOC analyst sees when you attack (log sources, SIEM concepts — Splunk/ELK exist by name, you don't need to operate one yet)
-- Being able to say "here's what the defender would have seen" turns a technical walkthrough into a much stronger interview answer
+### 22. Defensive & Blue Team Awareness
+- Signature-based vs behavioral AV/EDR detection, conceptually
+- What a SOC analyst sees when you attack: log sources, SIEM concepts (Splunk/ELK by name)
+- Understanding detection is what elevates offensive work from "breaking things" to genuine security expertise — elite operators think like defenders
 
-### 17. **[NEW]** Binary/Exploit Basics (light touch only — don't over-invest before your internship)
-- Buffer overflow concept (stack-based), how `EIP` gets overwritten — do ONE guided walkthrough (TryHackMe "Buffer Overflow Prep")
-- `gdb`, `pwndbg` — know they exist and roughly what they're for
-- This is normally a Year 2 skill; don't let it eat your application timeline
-
-### 18. **[NEW]** Forensics/Incident Response Literacy (not your track, but interviewers test for baseline awareness)
-- Know what "chain of custody" means
+### 23. Forensics & Incident Response Literacy
+- Chain of custody concept
 - Basic log analysis: reading auth logs, web server logs for indicators of compromise
-- This is 2-3 hours of reading, not a phase — you are not becoming a forensics analyst
+- Not a specialization to master, but baseline literacy every well-rounded offensive practitioner should have
+
+### 24. Operating Systems for Offensive Work
+- Kali Linux — know your pre-installed toolset well enough to not need to Google basic tool locations
+- Parrot OS — worth knowing as an alternative
 
 ---
 
-## PHASE 6 — Portfolio, Certs, and Career Assets (Weeks 7-8, built continuously from Week 2)
+## TIER 7 — Continuous Mastery (No Ceiling — This Is the "Elite" Layer)
 
-### Portfolio deliverables
-- Public writeups: one per completed box (methodology: recon → findings → exploitation → priv esc → impact → fix). Publish on GitHub or a simple blog.
-- One polished vulnerability report written like a real client deliverable — this single artifact often outweighs a whole resume in interviews.
-- 1-2 original scripts (a recon automation tool, a basic scanner) — shows initiative beyond following tutorials.
-- **[NEW]** One bug bounty writeup (see below) — public, real-world validation carries more weight than another lab box.
+Elite-level skill in this field isn't a destination, it's an ongoing practice. This tier never "completes" — it's how you keep sharpening after everything above is second nature.
 
-### **[NEW]** Bug Bounty as a Parallel Track
-- Platforms: HackerOne, Bugcrowd — even a zero-payout, valid finding is portfolio gold
-- Start with wide-scope, low-competition programs, including Vulnerability Disclosure Programs (VDPs, no bounty but still real-world and citable)
-- A single public bug bounty report demonstrates you can find real vulns, not just solve pre-built labs
-
-### Certification/credential (pick one based on time/budget)
-- TryHackMe Jr Penetration Tester path certificate (cheapest, matches this roadmap directly)
-- CompTIA Security+ (recognized by HR/ATS filters, needs dedicated study time)
-- eJPT by INE (~$200, hands-on, well-regarded specifically for pentest roles)
-- **[NEW] PNPT (TCM Security)** — increasingly recommended alongside eJPT/THM Jr Pentester; cheaper than OSCP and includes a real reporting component that matches your Phase 6 portfolio goal directly
-- **[NEW] CRTP (Altered Security)** — the community-standard "next step" after AD basics if you want a red-team-flavored cert
-- If budget-constrained: skip the paid exam, list it as "in progress," lean harder on the portfolio
-- **Note on OSCP**: it's the long-term goal almost everyone mentions, but community consensus is clear — don't attempt it before this roadmap. Do it 3-6 months later, once fundamentals are automatic.
-
-### Resume & LinkedIn
-- Resume rebuild: lead with labs/projects framed like real engagements, not "I'm a student with no experience." List THM/HTB stats, writeup links, GitHub, any CTF placements, and your bug bounty finding if you have one.
-- LinkedIn: active profile, headline reflecting your direction (e.g. "Aspiring Penetration Tester | OWASP Top 10 | TryHackMe Top X%"), weekly progress posts starting Week 3-4, not Week 7.
-
-### **[NEW]** Communities — Join From Day 1, Not Week 7
-- **Reddit**: r/AskNetsec, r/netsecstudents, r/oscp, r/HowToHack
-- **Discord**: TryHackMe official Discord, HackTheBox official Discord — both have active "career" and "help" channels
-- **Twitter/X**: search hashtags `#infosec`, `#OSCP`, `#bugbountytips` rather than following one fixed list of accounts, since this space moves fast
-- **Quora search worth doing**: "How did you get your first pentest internship with no experience" — the recurring answer pattern always matches this roadmap: public writeups + one polished report + active community presence
-
-### **[NEW]** Interview Prep Specifics
-- Be ready to whiteboard the TCP 3-way handshake AND narrate a full attack chain (recon → exploit → privesc → impact) verbally, not just execute it hands-on
-- Have GTFOBins / LOLBAS knowledge sharp — these come up as rapid-fire interview questions
-- Practice explaining ONE of your writeups in under 3 minutes — interviewers care more about methodology narration than the specific CVE name
+- **Original research**: read and reproduce recent CVEs and public disclosures to understand novel vulnerability classes as they emerge
+- **CTF competitions**: regularly compete in live CTFs (not just static labs) — this is where real-time, adversarial-pressure skill is built
+- **Contribute to open-source security tools**: submitting to or building tools used by the community (Impacket, BloodHound, custom Burp extensions, etc.) is a marker of genuine depth
+- **Deep-dive one specialization**: pick one of AD attacks, binary exploitation, cloud security, or mobile security and go past "competent" into genuine expert depth in that one area
+- **Teach**: writing detailed technical breakdowns of attacks (blogs, conference talks, detailed writeups) forces a level of understanding that solo practice never does
+- **Stay current continuously**: this field changes fast — new CVEs, new cloud misconfig classes, new evasion techniques appear constantly, and elite practitioners treat ongoing learning as permanent, not a phase they finish
 
 ---
 
 ## Full Sequence at a Glance
 
-| Phase | Topic | When |
-|---|---|---|
-| 0 | Setup + Ethics/Legal baseline | Day 1 |
-| 1 | Networking, Linux, Windows fundamentals | Weeks 1-2 |
-| 2 | OSINT, Scanning, Enumeration | Week 3 |
-| 3 | Network exploitation, Web (OWASP 10), API security, Password attacks | Weeks 4-5 |
-| 3.5 | Wireless attacks | Week 5 |
-| 4 | Linux/Windows PrivEsc, AD intro, AD deeper | Weeks 5-6 |
-| 4b | Mobile pentesting | Weeks 6-7 |
-| 4c | Cloud security | Week 7 |
-| 5 | Scripting, docs/reporting, social engineering, evasion/blue-team awareness, binary basics, forensics literacy | Parallel, Weeks 2-8 |
-| 6 | Portfolio, bug bounty, certs, resume/LinkedIn, communities, interview prep | Weeks 7-8, built continuously from Week 2 |
+| Tier | Focus |
+|---|---|
+| 0 | Setup, legal/ethical baseline |
+| 1 | Networking, Linux, Windows fundamentals |
+| 2 | OSINT, scanning, enumeration |
+| 3 | Network exploitation, web (OWASP 10), API security, password attacks, wireless attacks |
+| 4 | Linux/Windows privilege escalation, AD foundations, AD advanced |
+| 5 | Mobile pentesting, cloud security, binary exploitation, exploit development |
+| 6 | Scripting, reporting, social engineering, blue-team awareness, forensics literacy — runs alongside every other tier |
+| 7 | Continuous mastery: original research, live CTFs, open-source contribution, deep specialization, teaching |
 
-**Compressed 8-week version**: run Phases 0-4 and 5/6 exactly as your original plan, and treat 3.5, 4b, 4c, and Phase 5's new items (15-18) as *single-session reading + one lab each*, not mastery — bookmark full depth on those for immediately after you land the internship.
-
-**Full 10-12 week version**: give each [NEW] block its own 2-4 day slot as written above — this is the version that leaves genuinely no concept uncovered.
+Progress tier by tier, but treat Tier 6 as always-on rather than something you do once and move past. There is no true "finish line" at Tier 7 — that's the point of calling it elite.
